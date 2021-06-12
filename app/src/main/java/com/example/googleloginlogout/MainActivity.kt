@@ -28,11 +28,12 @@ class MainActivity : AppCompatActivity() {
 
         val logout = findViewById(R.id.logout) as Button
         logout.setOnClickListener {
-            mGoogleSignInClient.signOut().addOnCompleteListener {
+            /*mGoogleSignInClient.signOut().addOnCompleteListener {
                 val intent= Intent(this, LoginScreen::class.java)
                 startActivity(intent)
                 finish()
-            }
+            }*/
+            throw RuntimeException("Test Crash") // Force a crash
         }
     }
 }
